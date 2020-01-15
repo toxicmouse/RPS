@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+const string rock;
+const string paper;
+const string scissors;
+string playerChoice;
+
+//ask for players choice
+cout<<"Choose your weapon... rock, paper or scissors: ";
+cin>>playerChoice;
+cout<<"You chose " << playerChoice << ".\n";
+
+//CPU randomly pick RPS
+const string rpsList[3]={'rock', 'paper', 'scissors'};
+string cpuChoice = rpsList[rand() % 3];
+
+//print CPU choice
+cout<<"The CPU chooses "<< cpuChoice <<".\n";
+
+if (playerChoice =='paper' && cpuChoice = 'rock' || playerChoice =='scissors' && cpuChoice = 'paper' || playerChoice =='rock' && cpuChoice = 'scissors'){
+	cout<<"You WIN!\n";
+}
+else{
+	cout<<"You LOSE!\n";
+}
+
+system("PAUSE"); 
+return main();
+}
